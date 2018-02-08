@@ -6,7 +6,7 @@
 /*   By: pde-rent <pde-rent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/11 15:04:12 by pde-rent          #+#    #+#             */
-/*   Updated: 2018/02/08 11:06:27 by pde-rent         ###   ########.fr       */
+/*   Updated: 2018/02/08 18:12:52 by pde-rent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int				get_next_line(int fd, char **line)
 	{
 		IS((*line = (char *)malloc(ft_strlen(stack[fd]))));
 		*line = ft_strcpy(*line, stack[fd]);
-		bzero(stack[fd], ft_strlen(stack[fd]));
+		ft_bzero(stack[fd], ft_strlen(stack[fd]));
 		return (1);
 	}
 	return (0);
